@@ -40,5 +40,6 @@ export async function getStaticProps(){
     //propsの形でreturnで返す. この値をblog-pageにpropsで渡すことでHTMLに埋め込まれて、事前に生成する
     return {
         props: { filteredPosts },
+        revalidate: 3,
     };
 }
